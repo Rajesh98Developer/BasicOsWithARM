@@ -1,0 +1,21 @@
+22:15:44 **** Incremental Build of configuration Debug for project 03_timebase ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/timebase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"..//chip_headers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/timebase.d" -MT"Src/timebase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timebase.o"
+arm-none-eabi-gcc -o "03_timebase.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\malli\OneDrive\Desktop\MyRules\RTOS & Zephyr\Cortex M4 RTOS\M4_OS_01_CUBE\00_led_driver\03_timebase\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="03_timebase.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 03_timebase.elf
+ 
+arm-none-eabi-size  03_timebase.elf 
+arm-none-eabi-objdump -h -S 03_timebase.elf  > "03_timebase.list"
+   text	   data	    bss	    dec	    hex	filename
+   1176	      4	   1572	   2752	    ac0	03_timebase.elf
+Finished building: default.size.stdout
+ 
+Finished building: 03_timebase.list
+ 
+22:15:52 **** Incremental Build of configuration Debug for project 03_timebase ****
+make -j12 all 
+arm-none-eabi-size  03_timebase.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1176	      4	   1572	   2752	    ac0	03_timebase.elf
+Finished building: default.size.stdout
+ 
