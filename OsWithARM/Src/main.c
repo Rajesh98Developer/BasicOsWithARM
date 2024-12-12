@@ -18,16 +18,18 @@
 
 #include <stdint.h>
 #include "led.h"
+#include "timebase.h"
 
 int main(void)
 {
 	led_init();
+	timebase_init();
     /* Loop forever */
 	for(;;){
 		led_on();
-		for(int i = 0; i< 1000000; i++){		}
+		delay(1);
 
 		led_off();
-		for(int i = 0; i< 1000000; i++){		}
+		delay(1);
 	}
 }
